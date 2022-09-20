@@ -1,5 +1,5 @@
 package br.com.anasiqueira.listarestapi.controllers;
 
-public class ArtistaController {
+public class ListaController {
 
 }
