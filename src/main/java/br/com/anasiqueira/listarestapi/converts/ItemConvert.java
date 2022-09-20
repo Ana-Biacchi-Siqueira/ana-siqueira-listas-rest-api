@@ -1,5 +1,5 @@
 package br.com.anasiqueira.listarestapi.converts;
 
-public class DiscografiaConvert {
+public class ItemConvert {
 
 }

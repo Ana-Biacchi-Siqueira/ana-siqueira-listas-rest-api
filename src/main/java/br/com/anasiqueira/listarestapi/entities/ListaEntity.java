@@ -1,5 +1,5 @@
 package br.com.anasiqueira.listarestapi.entities;
 
-public class ArtistaEntity {
+public class ListaEntity {
 
 }

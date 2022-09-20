@@ -1,5 +1,5 @@
 package br.com.anasiqueira.listarestapi.converts;
 
-public class ArtistaConvert {
+public class ListaConvert {
 
 }
