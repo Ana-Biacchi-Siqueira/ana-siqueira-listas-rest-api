@@ -1,5 +1,12 @@
 package br.com.anasiqueira.listarestapi.dtos.outputs;
 
-public class ArtistaOutput {
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+public class ArtistaOutput {
+		
+	private Long id;
+	private String nome;
 }
