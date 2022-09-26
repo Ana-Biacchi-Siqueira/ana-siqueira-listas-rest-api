@@ -1,7 +1,6 @@
 package br.com.anasiqueira.listarestapi.dtos.outputs;
 
-import java.util.List;
-
+import br.com.anasiqueira.listarestapi.entities.ListaEntity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +10,6 @@ public class ItemOutput {
 
 	private Long id;
 	private String nomeItem;
-	private List<ListaOutput> listas;
+	private ListaEntity listas;
 	
 }

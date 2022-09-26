@@ -23,8 +23,8 @@ public class ListaConvert {
 	public ListaEntity inputToEntity(ListaInput listaInput) {
 		return model.map(listaInput, ListaEntity.class);
 	}
-	public List<ListaOutput> entityToOutput(List<ListaEntity> listasEntity) {
-		return listasEntity.stream().map(lista -> this.entityToOutput(lista)).collect(Collectors.toList());
+	public List<ListaOutput> entityToOutput(List<ListaEntity> listarTodos) {
+		return listarTodos.stream().map(lista -> this.entityToOutput(lista)).collect(Collectors.toList());
 	}
 	public void copyDataInputToEntity(ListaInput listaInput, ListaEntity listaEntity) {
 		model.map(listaInput, listaEntity);

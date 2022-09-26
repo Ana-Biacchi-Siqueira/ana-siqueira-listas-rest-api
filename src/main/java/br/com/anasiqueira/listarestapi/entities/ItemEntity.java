@@ -1,7 +1,5 @@
 package br.com.anasiqueira.listarestapi.entities;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,7 +27,7 @@ public class ItemEntity {
 	private String itemLista;
 	
 	@ManyToOne
-	@JoinTable(name = "tb_itens_listas", joinColumns = @JoinColumn(name = "item_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "lista_id", referencedColumnName = "id"))
-	private List<ListaEntity> listas;
+	@JoinColumn(name = "tb_itens_listas")
+	private ListaEntity lista;
 	
 }

@@ -3,6 +3,8 @@ package br.com.anasiqueira.listarestapi.converts;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -17,17 +19,18 @@ public class ItemConvert {
 	@Autowired
 	private ModelMapper model;
 	
-	public ItemOutput entityToOutput(ItemEntity itemEntity) {
-		return model.map(itemEntity, ItemOutput.class);
+	public ItemOutput entityToOutput(ItemEntity itemPostado) {
+		return model.map(itemPostado, ItemOutput.class);
 	}
-	public ItemEntity inputToEntity(ItemInput itemInput) {
+	public ItemEntity inputToEntity(@Valid ItemInput itemInput) {
 		return model.map(itemInput, ItemEntity.class);
 	}
-	public List<ItemOutput> entityToOutput(List<ItemEntity> itensEntity) {
-		return itensEntity.stream().map(item -> this.entityToOutput(item)).collect(Collectors.toList());
+	public List<ItemOutput> entityToOutput(List<ItemEntity> listarTodosItens) {
+		return listarTodosItens.stream().map(item -> this.entityToOutput(item)).collect(Collectors.toList());
 	}
-	public void copyDataInputToEntity(ItemInput itemInput, ItemEntity itemEntity) {
+	public void copyDataInputToEntity(@Valid ItemInput itemInput, ItemEntity itemEntity) {
 		model.map(itemInput, itemEntity);
 	}
+	
 	
 }
